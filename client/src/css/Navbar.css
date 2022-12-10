@@ -1,0 +1,37 @@
+/* Ke Chen */
+#mainNavbar {
+    width: 80%;
+    margin: auto;
+}
+
+.brand {
+    color: black;
+    margin: 0;
+}
+
+.brand:hover {
+    color: black;
+}
+
+.navbar-nav{
+    height: 40px;
+    /* vertical-align: bottom; */
+}
+
+.icons {
+    display: flex;
+    justify-content: flex-end;
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.icon:hover {
+    border-bottom: 1px solid;
+}
+
+
+.material-symbols-outlined {
+    font-size: 25px;
+    font-weight:lighter;
+}
+
