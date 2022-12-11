@@ -38,13 +38,8 @@ Icon: [Google Icon](fonts.google.com/icons)
 
 
 ## Screenshots
-![Homepage](https://github.com/KeChen97/CS5610-Project3/blob/main/Proj3Screenshots/HomePage.png?raw=true)
-![Signup](https://github.com/KeChen97/CS5610-Project3/blob/main/Proj3Screenshots/Signup.png?raw=true)
-![Login](https://github.com/KeChen97/CS5610-Project3/blob/main/Proj3Screenshots/Login.png?raw=true)
-![Plan](https://github.com/KeChen97/CS5610-Project3/blob/main/Proj3Screenshots/DegreePlan.png?raw=true)
-![Recommendation](https://github.com/KeChen97/CS5610-Project3/blob/main/Proj3Screenshots/Recommendations.png?raw=true)
-![Create](https://github.com/KeChen97/CS5610-Project3/blob/main/Proj3Screenshots/CreatePlan.png?raw=true)
-![Profile](https://github.com/KeChen97/CS5610-Project3/blob/main/Proj3Screenshots/ProfileEdit.png?raw=true)
+![beforeafter1](https://github.com/KeChen97/CSDegreePlanner/blob/main/Proj4Screenshots/beforeafter1.png?raw=true)
+![beforeafter2](https://github.com/KeChen97/CSDegreePlanner/blob/main/Proj4Screenshots/beforeafter2.png?raw=true)
 
 
 
