@@ -1,12 +1,15 @@
 import React, { useEffect, useState } from "react";
 import Path from "./Path";
+import "../css/Paths.css"
+import PropTypes from "prop-types";
 
 // Jerry Asala
-export default function Paths() {
+export default function Paths({ recData, pos, pCourses }) {
   const [path, setPath] = useState([]);
   const [courses, setCourses] = useState([]);
   const [arrOfCourseNames, setArrOfCourseNames] = useState([]);
 
+  //console.log("ar of courses from within paths func..", c)
   useEffect(() => {
     const getPath = async () => {
       const res = await fetch("/getPaths");
@@ -41,6 +44,7 @@ export default function Paths() {
         arrOfCourses = course.courses.slice(1);
       }
     });
+    //console.log("ar of courses from within paths func..", arrOfCourses)
     return arrOfCourses;
   };
 
@@ -68,18 +72,21 @@ export default function Paths() {
 
   return (
     <>
-      <div className="row">
-        {path.map((path, index) => (
+      <div className="row path-div">
           <Path
-            name={path}
-            key={index}
-            courses={pathCourses}
+            name={recData}
+            key={pos}
+            pathCourses={pCourses}
+            courses={pCourses}
             courseNames={getCourseNameArr}
           />
-        ))}
       </div>
     </>
   );
 }
 
-Paths.prototype = {};
+Paths.prototype = {
+  recData: PropTypes.string.isRequired,
+  pos: PropTypes.number.isRequired,
+  pCourses: PropTypes.array.isRequired
+};

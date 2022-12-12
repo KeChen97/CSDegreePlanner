@@ -1,16 +1,20 @@
 import React, { useEffect, useState } from "react";
 import Plan from "./Plan";
 import PropTypes from "prop-types";
+import "../css/Plans.css"
 
 // Jerry Asala
-export default function Plans({ numOfPlans, dep }) {
+export default function Plans({ numOfPlans, dep, data, repage }) {
+  console.log("data is ..", data)
   const [arrOfCourses, setArrOfCourses] = useState([]);
   const [plans, setPlans] = useState([]);
   const [changePlans, setChangePlans] = useState([0]);
 
-  function chngPlans() {
+  const chngPlans = () => {
     const newPlans = [changePlans[0] + 1];
     setChangePlans(newPlans);
+    console.log("I just called repage while deleting")
+    repage(data[0].courses[0].pos)
   }
 
   useEffect(() => {
@@ -22,12 +26,10 @@ export default function Plans({ numOfPlans, dep }) {
       console.log("these are the plans: ", data.plans);
     };
     getPlans();
+    //repage()
   }, [dep, changePlans]);
 
-  useEffect(() => {
-    numOfPlans(plans.length);
-    console.log("initially, plan length is: ", plans.length);
-  }, [plans.length, numOfPlans]);
+  
 
   useEffect(() => {
     const getArrOfCourseName = async () => {
@@ -64,24 +66,25 @@ export default function Plans({ numOfPlans, dep }) {
   }
 
   return (
-    <>
-      <div className="row">
-        {plans.map((plan, index) => (
-          <Plan
-            courses={plan.courses.slice(1)}
-            key={index}
-            index={plan.courses[0].pos}
-            pos={plan.courses[0].pos}
+    
+      <div className="row plan-row plan-div">
+          {data.length > 0 && <Plan
+            courses={data[0].courses.slice(1)}
+            key={data[0].courses[0].pos}
+            index={data[0].courses[0].pos}
+            pos={data[0].courses[0].pos}
             arrOfCourses={getCourseName}
             dep={chngPlans}
-          />
-        ))}
+          />}
+          
+
       </div>
-    </>
   );
 }
 
 Plans.prototype = {
   numOfPlans: PropTypes.func.isRequired,
   dep: PropTypes.func.isRequired,
+  data: PropTypes.array.isRequired,
+  repage: PropTypes.func.isRequired
 };

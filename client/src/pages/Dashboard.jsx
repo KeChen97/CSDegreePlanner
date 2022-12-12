@@ -1,23 +1,37 @@
-// Ke Chen
+// Ke Chen & Jerry Asala
 import React, { useEffect, useState } from "react";
 import API from "../API/API";
-import CurrentPlansTab from "../components/CurrentPlansTab";
-import CreatePlanTab from "../components/CreatePlanTab";
-import RecommendationTab from "../components/RecommendationTab";
-import Tabs from "../components/Tabs";
+import Paths from "../components/Paths";
+import Plans from "../components/Plans";
+import CreateDegreePlan from "../components/CreateDegreePlan";
+import DegreePlanPagination from "../components/DegreePlanPagination";
 import "../css/Dashboard.css";
-import PropTypes from "prop-types";
+import RecommendationPagination from "../components/RecommendationPagination";
 
-export default function Dashboard({ isLogin, userLogout }) {
-  /*
-   * Ke Chen
-   * tab variable decides which component to render
-   * Render flag values: 1: Current Plans 2: Create plan 3: Recommendations
-   *
-   */
-  let [tab, setTab] = useState(1);
+// Jerry Asala
+export default function Dashboard() {
+  // Ke Chen
   let [user, setUser] = useState({});
 
+  // Jerry Asala
+  const [currentPage, setCurrentPage] = useState(1);
+  const [plansPerPage] = useState(1);
+
+  const [cPage, setCPage] = useState(1);
+  const [recsPerPage] = useState(1);
+
+  const [data, setData] = useState([]);
+  const [recData, setRecData] = useState([]);
+
+  const [courses, setCourses] = useState([]);
+  const [objPathCourses, setObjPathCourses] = useState({});
+
+  const [page, setPage] = useState([0]);
+
+  const [planState, setPlanState] = useState([0]);
+  let planCount = data.length;
+
+  // Ke Chen
   useEffect(() => {
     async function getUserInfo() {
       try {
@@ -31,34 +45,161 @@ export default function Dashboard({ isLogin, userLogout }) {
     getUserInfo();
   }, []);
 
+  // Jerry Asala
+  useEffect(() => {
+    const getPlans = async () => {
+      const res = await fetch("/getUserPlans");
+      const data = await res.json();
+
+      setData(data.plans);
+    };
+    getPlans();
+  }, [planState, page]);
+
+  useEffect(() => {
+    const getPath = async () => {
+      const res = await fetch("/getPaths");
+      const data = await res.json();
+      let allPaths = [];
+
+      if (data) {
+        data.paths.forEach((path) => {
+          allPaths.push(path.name);
+        });
+      }
+
+      setRecData(allPaths);
+    };
+    getPath();
+  }, []);
+
+  useEffect(() => {
+    const getCourses = async () => {
+      const res = await fetch("/getPathRecs");
+      const data = await res.json();
+
+      console.log("done getting courses");
+
+      let allCourses = {};
+      data.pathRecs.forEach((course) => {
+        allCourses[course.courses[0].path] = course.courses.slice(1);
+      });
+
+      setObjPathCourses(allCourses);
+
+      setCourses(data.pathRecs);
+    };
+    getCourses();
+  }, []);
+
+  const pathCourses = function getCourse(path) {
+    let arrOfCourses;
+    courses.forEach((course) => {
+      if (course.courses[0].path === path) {
+        arrOfCourses = course.courses.slice(1);
+      }
+    });
+    console.log("called from use plan", arrOfCourses);
+    return arrOfCourses;
+  };
+
+  if (!planState) {
+    return <div>Hello, {user?.fname}</div>;
+  }
+
+  // Jerry Asala
+  const handler = () => {
+    const newState = [planState[0] + 1];
+    setPlanState(newState);
+    setCurrentPage(nPages);
+  };
+
+  const repage = (pos) => {
+    if (currentPage == 1) {
+      setCurrentPage(currentPage + 1);
+    } else if (currentPage == nPages) {
+      setCurrentPage(currentPage - 1);
+    }
+
+    const newPage = [page[0] + 1];
+    setPage(newPage);
+  };
+
+  const numOfPlans = (num) => {
+    planCount = num;
+  };
+
+  const getPlanCount = () => {
+    console.log("just clicked..and plan count is: ", planCount);
+    return planCount;
+  };
+
+  const indexOfLastRecord = currentPage * plansPerPage;
+  const indexOfFirstRecord = indexOfLastRecord - plansPerPage;
+  const currentPlan = data.slice(indexOfFirstRecord, indexOfLastRecord);
+  const nPages = Math.ceil(data.length / plansPerPage);
+
+  const indexOfLastRec = cPage * recsPerPage;
+  const indexOfFirstRec = indexOfLastRec - recsPerPage;
+  const currentRec = recData.slice(indexOfFirstRec, indexOfLastRec);
+
+  const rPages = Math.ceil(recData.length / recsPerPage);
+  let pos = recData.indexOf(currentRec);
+
   return (
-    <div className="dashWrapper">
-      <div className="dashPanel row">
-        <div className="col-2 leftPanel">
-          <Tabs setTab={setTab} user={user} userLogout={userLogout} />
+    <>
+      <div className="row main-row">
+        <div className="col-4 child-col card border-secondary">
+          <div className="degree-div">
+            <h6>
+              <strong>Degree Plan</strong>
+            </h6>
+            <Plans
+              numOfPlans={numOfPlans}
+              dep={planState}
+              data={currentPlan}
+              repage={repage}
+            />
+            <DegreePlanPagination
+              nPages={nPages}
+              currentPage={currentPage}
+              setCurrentPage={setCurrentPage}
+            />
+          </div>
         </div>
-        <div className="col-2 rightPanel">
-          {user ? (
-            tab === 1 ? (
-              <CurrentPlansTab />
-            ) : tab === 2 ? (
-              <CreatePlanTab />
-            ) : tab === 3 ? (
-              <RecommendationTab />
-            ) : (
-              ""
-            )
-          ) : (
-            "Please Login"
-          )}
+        <div className="col-4 child-col card border-secondary">
+          <div className="create-div">
+            <h6>
+              <strong>Create Plan</strong>
+            </h6>
+            <CreateDegreePlan
+              planCount={getPlanCount}
+              handlePlanState={handler}
+            />
+          </div>
         </div>
-        <div className="mainPanel"></div>
+        <div className="col-4 child-col card border-secondary">
+          <div className="rec-div">
+            <h6>
+              <strong>Recommendations</strong>
+            </h6>
+            <Paths
+              recData={currentRec}
+              pos={pos}
+              pCourses={objPathCourses ? objPathCourses[currentRec] : []}
+              c={courses}
+              key={courses}
+            />
+            <RecommendationPagination
+              rPages={rPages}
+              cPage={cPage}
+              setCPage={setCPage}
+            />
+          </div>
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 
-Dashboard.prototype = {
-  isLogin: PropTypes.bool,
-  userLogout: PropTypes.func,
-};
+Dashboard.prototype = {};

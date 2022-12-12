@@ -4,10 +4,12 @@ import PropTypes from "prop-types";
 
 // Jerry Asala
 export default function PathItem({ courses, courseNames }) {
+
+  console.log("arrcourses..", courses)
   if (!courses) {
     return (
       <div>
-        <p>failed</p>
+        <p>Loading...</p>
       </div>
     );
   }
@@ -17,13 +19,14 @@ export default function PathItem({ courses, courseNames }) {
       {courses.map((course, index) => {
         if (course.name) {
           return (
-            <div className="card-body text-center" key={index}>
+            <div className="" key={index}>
               <PathDetail
                 code={course.name}
                 names={courseNames()}
                 semester={course.semester}
               />
             </div>
+            
           );
         }
         return null;
@@ -34,5 +37,5 @@ export default function PathItem({ courses, courseNames }) {
 
 PathItem.prototype = {
   courses: PropTypes.array.isRequired,
-  courseNames: PropTypes.func,
+  courseNames: PropTypes.func.isRequired,
 };

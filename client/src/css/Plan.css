@@ -1,0 +1,15 @@
+.plan-div {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.plan-wrapper {
+    flex: 1;
+}
+
+.delBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

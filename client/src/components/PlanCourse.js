@@ -3,7 +3,10 @@ import PropTypes from "prop-types";
 
 // Jerry Asala
 export default function PlanCourse({ code, getName, semester }) {
-  return <div className="card-body">{`${code} - ${getName}`}</div>;
+  return <div className="">
+            <div><strong><em>{`Semester ${semester}:`}</em></strong></div>
+            <div className="text-center">{`${code} : ${getName}`}</div>
+          </div>;
 }
 
 PlanCourse.prototype = {

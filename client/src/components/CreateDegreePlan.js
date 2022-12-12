@@ -2,6 +2,8 @@ import React from "react";
 import PopulateCourses from "./PopulateCourses";
 import CreatePlan from "./CreatePlan";
 import PropTypes from "prop-types";
+import ClearFields from "./ClearFields";
+import "../css/CreateDegreePlan.css";
 
 // Jerry Asala
 export default function CreateDegreePlan({ planCount, handlePlanState }) {
@@ -38,9 +40,17 @@ export default function CreateDegreePlan({ planCount, handlePlanState }) {
     handlePlanState();
   };
 
+  const clearFields = () => {
+    const selectedCourses = document.querySelectorAll(".form-select");
+    for (let i = 0; i < selectedCourses.length; i++) {
+      let select = selectedCourses[i];
+      select.value = "none";
+    }
+  };
+
   return (
     <>
-      <div className="card card-body">
+      <div className="plan-div">
         <div className="sem-one" id="one">
           <p className="fw-bold badge rounded-pill text-bg-secondary m-2">
             Semester I:
@@ -137,6 +147,7 @@ export default function CreateDegreePlan({ planCount, handlePlanState }) {
           </div>
         </div>
         <CreatePlan onClick={createPlan} />
+        <ClearFields onClick={clearFields} />
       </div>
       <PopulateCourses />
     </>

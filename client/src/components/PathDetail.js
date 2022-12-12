@@ -8,9 +8,10 @@ export default function PathDetail({ code, names, semester }) {
       {names.map((name, index) => {
         if (name.code === code) {
           return (
-            <span key={index}>
-              {`${code} - ${name.name} : (semester ${semester})`}
-            </span>
+            <div key={index}>
+              <div><strong><em>{`Semester ${semester}:`}</em></strong></div>
+              <div className="text-center">{`${code} : ${name.name}`}</div>
+            </div>
           );
         }
         return null;

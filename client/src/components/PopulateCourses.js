@@ -33,3 +33,5 @@ export default function PopulateCourses() {
 
   return <>{courses.map((course) => populateOptions(course))}</>;
 }
+
+PopulateCourses.prototype = {}
