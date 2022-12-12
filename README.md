@@ -38,7 +38,9 @@ Icon: [Google Icon](fonts.google.com/icons)
 ## Screenshots
 ![beforeafter1](https://github.com/KeChen97/CSDegreePlanner/blob/main/Proj4Screenshots/beforeafter1.png?raw=true)
 ![beforeafter2](https://github.com/KeChen97/CSDegreePlanner/blob/main/Proj4Screenshots/beforeafter2.png?raw=true)
+Dashboard before
 ![dashbefore](https://github.com/KeChen97/CSDegreePlanner/blob/main/Proj3Screenshots/dashbefore.png?raw=true)
+Dashboard after
 ![dashafter](https://github.com/KeChen97/CSDegreePlanner/blob/main/Proj4Screenshots/WX20221212-133026@2x.png?raw=true)
 
 
