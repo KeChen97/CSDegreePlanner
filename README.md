@@ -7,14 +7,12 @@ The goal is to create a degree planner for students in the Khoury Align MSCS pro
 
 ## Author:
 [Ke Chen](https://kechen97.github.io/)
-- User login and registration 
-- User profile edit and delete
-- Home page and Nav bar display
-- Deployment
+- Fixed accessibility issue
+- Reorganized components and styles
 
 [Jeremiah Asala](https://jerryasala.github.io/)
-- User add, view, update and delete path plans
-- Dashboard display plans and recommendation of courses
+- Fixed accessibility issue
+- Add new Dashboard features
 
 
 ## Deployment 
@@ -40,6 +38,10 @@ Icon: [Google Icon](fonts.google.com/icons)
 ## Screenshots
 ![beforeafter1](https://github.com/KeChen97/CSDegreePlanner/blob/main/Proj4Screenshots/beforeafter1.png?raw=true)
 ![beforeafter2](https://github.com/KeChen97/CSDegreePlanner/blob/main/Proj4Screenshots/beforeafter2.png?raw=true)
+Dashboard before
+![dashbefore](https://github.com/KeChen97/CSDegreePlanner/blob/main/Proj3Screenshots/dashbefore.png?raw=true)
+Dashboard after
+![dashafter](https://github.com/KeChen97/CSDegreePlanner/blob/main/Proj4Screenshots/WX20221212-133026@2x.png?raw=true)
 
 
 
