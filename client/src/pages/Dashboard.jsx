@@ -111,7 +111,13 @@ export default function Dashboard() {
   const handler = () => {
     const newState = [planState[0] + 1];
     setPlanState(newState);
-    setCurrentPage(nPages);
+    console.log("this is cpage", currentPage);
+    console.log("this is npage", nPages);
+    if (currentPage - 1 === 0) {
+      setCurrentPage(currentPage);
+    } else {
+      setCurrentPage(nPages);
+    }
   };
 
   const repage = (pos) => {
@@ -151,9 +157,9 @@ export default function Dashboard() {
       <div className="row main-row">
         <div className="col child-col mycard border-secondary">
           <div className="degree-div">
-            <h1 className="dashTitle">
+            <h6>
               <strong>Degree Plan</strong>
-            </h1>
+            </h6>
             <Plans
               numOfPlans={numOfPlans}
               dep={planState}
@@ -169,9 +175,9 @@ export default function Dashboard() {
         </div>
         <div className="col child-col mycard border-secondary">
           <div className="create-div">
-            <p className="dashTitle">
+            <h6>
               <strong>Create Plan</strong>
-            </p>
+            </h6>
             <CreateDegreePlan
               planCount={getPlanCount}
               handlePlanState={handler}
@@ -180,9 +186,9 @@ export default function Dashboard() {
         </div>
         <div className="col child-col mycard border-secondary">
           <div className="rec-div">
-            <p className="dashTitle">
+            <h6>
               <strong>Recommendations</strong>
-            </p>
+            </h6>
             <Paths
               recData={currentRec}
               pos={pos}

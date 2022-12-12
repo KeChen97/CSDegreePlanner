@@ -27,7 +27,7 @@ function App() {
     <div>
       <main>
         <BrowserRouter>
-          <Navbar isLogin={isLogin} />
+          <Navbar isLogin={isLogin} userLogout={userLogout} />
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/register" element={<RegisterPage />} />

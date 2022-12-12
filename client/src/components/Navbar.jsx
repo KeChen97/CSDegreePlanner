@@ -4,10 +4,22 @@ import API from "../API/API";
 import { Link } from "react-router-dom";
 import "../css/Navbar.css";
 import AccountIcon from "./AccountIcon";
+import LogoutIcon from "./LogoutIcon";
 import PropTypes from "prop-types";
 
-function Navbar({ isLogin }) {
+function Navbar({ isLogin, userLogout }) {
   let [user, setUser] = useState({});
+
+  // const getUserInfo = async function () {
+  //   try {
+  //     const res = await API.getUser();
+  //     console.log("User get in Profile", res);
+  //     setUser(res.user);
+  //     console.log(res.user);
+  //   } catch (e) {
+  //     console.log(e);
+  //   }
+  // }
 
   useEffect(() => {
     async function getUserInfo() {
@@ -15,6 +27,7 @@ function Navbar({ isLogin }) {
         const res = await API.getUser();
         console.log("User get in Profile", res);
         setUser(res.user);
+        console.log(user);
       } catch (e) {
         console.log(e);
       }
@@ -48,7 +61,10 @@ function Navbar({ isLogin }) {
           </li>
         </ul>
         <div className="navbar-nav icons">
-          <div className="">{user ? <AccountIcon /> : ""}</div>
+          <div className="">{isLogin ? <AccountIcon /> : ""}</div>
+          <div className="">
+            {isLogin ? <LogoutIcon userLogout={userLogout} /> : ""}
+          </div>
         </div>
       </nav>
     </div>
@@ -57,6 +73,7 @@ function Navbar({ isLogin }) {
 
 Navbar.prototype = {
   isLogin: PropTypes.bool,
+  userLogout: PropTypes.func,
 };
 
 export default Navbar;

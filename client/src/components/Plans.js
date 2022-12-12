@@ -55,17 +55,21 @@ export default function Plans({ numOfPlans, dep, data, repage }) {
     return courseName;
   }
 
-  if (plans.length === 0) {
+  /*if (plans.length === 0) {
     return (
       <>
-        <p style={{ margin: "8px 0px" }}>No plan(s) to show</p>
+        <h4>No plan(s) to show</h4>
       </>
     );
-  }
+  }*/
 
   return (
     <div className="row plan-row plan-div">
-      {data.length > 0 && (
+      {plans.length === 0 ? (
+        <div>No plan(s) to show</div>
+      ) : data.length <= 0 ? (
+        <div>Loading</div>
+      ) : (
         <Plan
           courses={data[0].courses.slice(1)}
           key={data[0].courses[0].pos}

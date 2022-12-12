@@ -8,7 +8,12 @@ function LogoutIcon({ userLogout }) {
   return (
     <div>
       <Link to="/" onClick={userLogout} className="nav-link">
-        <span className="material-symbols-outlined icon">logout</span> Logout
+        <span className="material-symbols-outlined logoutIcon icon">
+          logout
+        </span>
+        <span className="logoutText" style={{ fontSize: "14px" }}>
+          Logout
+        </span>
       </Link>
     </div>
   );

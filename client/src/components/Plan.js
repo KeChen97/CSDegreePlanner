@@ -1,7 +1,7 @@
 import PlanCourse from "./PlanCourse";
 import DeletePlan from "./DeletePlan";
 import PropTypes from "prop-types";
-import "../css/Plan.css"
+import "../css/Plan.css";
 
 // Jerry Asala
 export default function Plan({ courses, index, pos, arrOfCourses, dep }) {
@@ -20,36 +20,37 @@ export default function Plan({ courses, index, pos, arrOfCourses, dep }) {
       }
     } catch (e) {
       console.log(e);
-    }    
+    }
   };
 
   const del = async (pos) => {
-    await deletePlan(pos)
-    dep()
-  }
+    await deletePlan(pos);
+    dep();
+  };
 
   const indx = index + 1;
+
+  //if (!courses) {return } .  <div><p>Loading...</p></div> ||
+
   return (
     <div className="col">
       <div className="plan-div">
-        <p className="badge rounded-pill text-bg-secondary m-2">Plan {indx}</p>
+        <p className="badge rounded-pill text-bg-secondary">Plan {indx}</p>
         <div className="plan-wrapper">
-        {courses.map((course, index) => (
-          <PlanCourse
-            code={course.code}
-            getName={arrOfCourses(course.code)}
-            semester={course.semester}
-            key={index}
-          />
-        ))}
+          {courses.map((course, index) => (
+            <PlanCourse
+              code={course.code}
+              getName={arrOfCourses(course.code)}
+              semester={course.semester}
+              key={index}
+            />
+          ))}
         </div>
-        
-        
+
         <div className="d-grip">
-        <DeletePlan pos={pos} deletePlan={del} />
+          <DeletePlan pos={pos} deletePlan={del} />
+        </div>
       </div>
-      </div>
-      
     </div>
   );
 }

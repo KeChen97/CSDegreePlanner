@@ -1,6 +1,9 @@
 /*Ke Chen*/
+.logoutIcon {
+  margin-right: 3px;
+}
+
 .icon {
-  margin-right: 10px;
   vertical-align: bottom;
 }
 .icon:hover {
