@@ -52,18 +52,27 @@ export default function CreateDegreePlan({ planCount, handlePlanState }) {
     <>
       <div className="plan-div">
         <div className="sem-one" id="one">
-          <p className="fw-bold semester-badge badge rounded-pill text-bg-secondary">
-            Semester I:
-          </p>
           <div className="one">
-            <select className="form-select create-plan text-center">
+            <label
+              for="semester1"
+              className="fw-bold semester-badge badge rounded-pill text-bg-secondary"
+            >
+              Semester I:
+            </label>
+            <select
+              id="semester1"
+              className="form-select create-plan text-center"
+            >
               <option value="none" selected disabled hidden>
                 -select a course-
               </option>
             </select>
           </div>
           <div className="one">
-            <select className="form-select create-plan text-center">
+            <select
+              id="semester12"
+              className="form-select create-plan text-center"
+            >
               <option value="none" selected disabled hidden>
                 -select a course-
               </option>
@@ -71,18 +80,27 @@ export default function CreateDegreePlan({ planCount, handlePlanState }) {
           </div>
         </div>
         <div className="sem-two" id="two">
-          <p className="fw-bold badge rounded-pill text-bg-secondary">
+          <label
+            for="semester2"
+            className="fw-bold semester-badge badge rounded-pill text-bg-secondary"
+          >
             Semester II:
-          </p>
+          </label>
           <div className="two">
-            <select className="form-select create-plan text-center">
+            <select
+              id="semester2"
+              className="form-select create-plan text-center"
+            >
               <option value="none" selected disabled hidden>
                 -select a course-
               </option>
             </select>
           </div>
           <div className="two">
-            <select className="form-select create-plan text-center">
+            <select
+              id="semester22"
+              className="form-select create-plan text-center"
+            >
               <option value="none" selected disabled hidden>
                 -select a course-
               </option>
@@ -90,18 +108,27 @@ export default function CreateDegreePlan({ planCount, handlePlanState }) {
           </div>
         </div>
         <div className="sem-three" id="three">
-          <p className="fw-bold badge rounded-pill text-bg-secondary">
+          <label
+            for="semester3"
+            className="fw-bold semester-badge badge rounded-pill text-bg-secondary"
+          >
             Semester III:
-          </p>
+          </label>
           <div className="three">
-            <select className="form-select create-plan text-center">
+            <select
+              id="semester3"
+              className="form-select create-plan text-center"
+            >
               <option value="none" selected disabled hidden>
                 -select a course-
               </option>
             </select>
           </div>
           <div className="three">
-            <select className="form-select create-plan text-center">
+            <select
+              id="semester32"
+              className="form-select create-plan text-center"
+            >
               <option value="none" selected disabled hidden>
                 -select a course-
               </option>
@@ -109,18 +136,27 @@ export default function CreateDegreePlan({ planCount, handlePlanState }) {
           </div>
         </div>
         <div className="sem-four">
-          <p className="fw-bold badge rounded-pill text-bg-secondary">
+          <label
+            for="semester4"
+            className="fw-bold semester-badge badge rounded-pill text-bg-secondary"
+          >
             Semester IV:
-          </p>
+          </label>
           <div className="four">
-            <select className="form-select create-plan text-center">
+            <select
+              id="semester4"
+              className="form-select create-plan text-center"
+            >
               <option value="none" selected disabled hidden>
                 -select a course-
               </option>
             </select>
           </div>
           <div className="four">
-            <select className="form-select create-plan text-center">
+            <select
+              id="semester42"
+              className="form-select create-plan text-center"
+            >
               <option value="none" selected disabled hidden>
                 -select a course-
               </option>
@@ -128,18 +164,27 @@ export default function CreateDegreePlan({ planCount, handlePlanState }) {
           </div>
         </div>
         <div className="sem-five">
-          <p className="fw-bold badge rounded-pill text-bg-secondary">
+          <label
+            for="semester5"
+            className="fw-bold semester-badge badge rounded-pill text-bg-secondary"
+          >
             Semester V:
-          </p>
+          </label>
           <div className="five">
-            <select className="form-select create-plan text-center">
+            <select
+              id="semester5"
+              className="form-select create-plan text-center"
+            >
               <option value="none" selected disabled hidden>
                 -select a course-
               </option>
             </select>
           </div>
           <div className="five">
-            <select className="form-select create-plan text-center">
+            <select
+              id="semester52"
+              className="form-select create-plan text-center"
+            >
               <option value="none" selected disabled hidden>
                 -select a course-
               </option>

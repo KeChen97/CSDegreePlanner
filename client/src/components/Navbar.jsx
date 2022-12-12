@@ -37,7 +37,11 @@ function Navbar({ isLogin, userLogout }) {
 
   return (
     <div>
-      <nav id="mainNavbar" className="navbar navbar-expand-md fixed-top">
+      <nav
+        id="mainNavbar"
+        className="navbar navbar-expand-md fixed-top"
+        aria-label="navbar"
+      >
         <ul className="navbar-nav">
           <li className="nav-item">
             <Link to="/" className="brand nav-link">
@@ -63,7 +67,7 @@ function Navbar({ isLogin, userLogout }) {
         <div className="navbar-nav icons">
           <div className="">{isLogin ? <AccountIcon /> : ""}</div>
           <div className="">
-            {isLogin ? <LogoutIcon userLogout={userLogout} /> : ""}
+            {user ? <LogoutIcon userLogout={userLogout} /> : ""}
           </div>
         </div>
       </nav>

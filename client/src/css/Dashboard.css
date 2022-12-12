@@ -5,7 +5,7 @@
 
 .main-row {
   height: 720px;
-  margin-top: 20px;
+  /* margin-top: 20px; */
   margin-left: auto;
   margin-right: auto;
   margin-bottom: auto;
@@ -17,9 +17,14 @@
   height: 100%;
 }
 
+.bigtitle {
+  font-size: 18px;
+  text-align: center;
+}
+
 .dashTitle {
   font-size: 18px;
-  margin-bottom: 2px;
+  /* margin-bottom: 2px; */
 }
 
 .badge {
@@ -76,12 +81,17 @@
 .cancelBtn {
   margin: 2px 0px;
   color: white;
-  background-color: #da6556;
+  background-color: #d14242;
   --bs-btn-hover-border-color: #da6556;
 }
 
 .cancelBtn:hover {
-  background-color: #cf3d2a;
+  color: white;
+  background-color: #b52d1b;
+}
+
+.createBtn:hover {
+  background-color: #21740a;
 }
 
 .courseName {

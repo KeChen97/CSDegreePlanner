@@ -155,11 +155,12 @@ export default function Dashboard() {
   return (
     <div className="dashWrapper">
       <div className="row main-row">
+        <h1 className="bigtitle">Welcome to create your degree plans!</h1>
         <div className="col child-col mycard border-secondary">
           <div className="degree-div">
-            <h6>
+            <p className="dashTitle">
               <strong>Degree Plan</strong>
-            </h6>
+            </p>
             <Plans
               numOfPlans={numOfPlans}
               dep={planState}
@@ -175,9 +176,9 @@ export default function Dashboard() {
         </div>
         <div className="col child-col mycard border-secondary">
           <div className="create-div">
-            <h6>
+            <p className="dashTitle">
               <strong>Create Plan</strong>
-            </h6>
+            </p>
             <CreateDegreePlan
               planCount={getPlanCount}
               handlePlanState={handler}
@@ -186,9 +187,9 @@ export default function Dashboard() {
         </div>
         <div className="col child-col mycard border-secondary">
           <div className="rec-div">
-            <h6>
+            <p className="dashTitle">
               <strong>Recommendations</strong>
-            </h6>
+            </p>
             <Paths
               recData={currentRec}
               pos={pos}

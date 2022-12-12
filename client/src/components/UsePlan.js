@@ -5,15 +5,15 @@ import PropTypes from "prop-types";
 export default function UsePlan({ onClick }) {
   return (
     <button
-      className="w-100 btn btn-success bg-success bg-gradient btn-block"
+      className="w-100 btn btn-success bg-success btn-block"
       type="button"
       onClick={() => onClick()}
     >
-      Use Plan
+      Use Recommendation
     </button>
   );
 }
 
 UsePlan.prototype = {
-    onClick: PropTypes.func.isRequired,
+  onClick: PropTypes.func.isRequired,
 };

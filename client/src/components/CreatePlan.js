@@ -7,7 +7,7 @@ export default function CreatePlan({ onClick }) {
     <>
       <div className="d-grid">
         <button
-          className="w-100 btn btn-success bg-success bg-gradient"
+          className="w-100 btn createBtn btn-success bg-success"
           type="button"
           onClick={() => onClick()}
         >
