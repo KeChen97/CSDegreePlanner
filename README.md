@@ -29,11 +29,13 @@ The goal is to create a degree planner for students in the Khoury Align MSCS pro
 
 ## Font
 Login/ Sign up Title : [JK Adobe](https://fonts.cdnfonts.com/css/jk-abode)  sans-serif
+
 Text: [Poppins](https://fonts.googleapis.com/css2?family=Poppins&amp;display=swap)  sans-serif 
+
 Icon: [Google Icon](fonts.google.com/icons)
 
 ## Usability Study Reports
-![Usability Study Reports](https://github.com/KeChen97/CSDegreePlanner/blob/main/Usability%20Study%20Reports.pdf)
+[Usability Study Reports](https://github.com/KeChen97/CSDegreePlanner/blob/main/Usability%20Study%20Reports.pdf)
 
 ## Screenshots
 ![beforeafter1](https://github.com/KeChen97/CSDegreePlanner/blob/main/Proj4Screenshots/beforeafter1.png?raw=true)
