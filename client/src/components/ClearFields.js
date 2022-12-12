@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 export default function ClearFields({ onClick }) {
   return (
     <button
-      className="w-100 btn btn-danger bg-danger bg-gradient"
+      className="w-100 btn cancelBtn bg-gradient"
       onClick={() => onClick()}
     >
       Clear Fields

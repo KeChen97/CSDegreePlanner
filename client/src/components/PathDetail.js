@@ -9,8 +9,12 @@ export default function PathDetail({ code, names, semester }) {
         if (name.code === code) {
           return (
             <div key={index}>
-              <div><strong><em>{`Semester ${semester}:`}</em></strong></div>
-              <div className="text-center">{`${code} : ${name.name}`}</div>
+              <div>
+                <strong>
+                  <em>{`Semester ${semester}:`}</em>
+                </strong>
+              </div>
+              <div className="courseName">{`${code} : ${name.name}`}</div>
             </div>
           );
         }

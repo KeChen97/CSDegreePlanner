@@ -52,7 +52,7 @@ export default function CreateDegreePlan({ planCount, handlePlanState }) {
     <>
       <div className="plan-div">
         <div className="sem-one" id="one">
-          <p className="fw-bold badge rounded-pill text-bg-secondary m-2">
+          <p className="fw-bold semester-badge badge rounded-pill text-bg-secondary">
             Semester I:
           </p>
           <div className="one">
@@ -71,7 +71,7 @@ export default function CreateDegreePlan({ planCount, handlePlanState }) {
           </div>
         </div>
         <div className="sem-two" id="two">
-          <p className="fw-bold badge rounded-pill text-bg-secondary m-2">
+          <p className="fw-bold badge rounded-pill text-bg-secondary">
             Semester II:
           </p>
           <div className="two">
@@ -90,7 +90,7 @@ export default function CreateDegreePlan({ planCount, handlePlanState }) {
           </div>
         </div>
         <div className="sem-three" id="three">
-          <p className="fw-bold badge rounded-pill text-bg-secondary m-2">
+          <p className="fw-bold badge rounded-pill text-bg-secondary">
             Semester III:
           </p>
           <div className="three">
@@ -109,7 +109,7 @@ export default function CreateDegreePlan({ planCount, handlePlanState }) {
           </div>
         </div>
         <div className="sem-four">
-          <p className="fw-bold badge rounded-pill text-bg-secondary m-2">
+          <p className="fw-bold badge rounded-pill text-bg-secondary">
             Semester IV:
           </p>
           <div className="four">
@@ -128,7 +128,7 @@ export default function CreateDegreePlan({ planCount, handlePlanState }) {
           </div>
         </div>
         <div className="sem-five">
-          <p className="fw-bold badge rounded-pill text-bg-secondary m-2">
+          <p className="fw-bold badge rounded-pill text-bg-secondary">
             Semester V:
           </p>
           <div className="five">

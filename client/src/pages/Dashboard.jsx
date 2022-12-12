@@ -147,13 +147,13 @@ export default function Dashboard() {
   let pos = recData.indexOf(currentRec);
 
   return (
-    <>
+    <div className="dashWrapper">
       <div className="row main-row">
-        <div className="col-4 child-col card border-secondary">
+        <div className="col child-col mycard border-secondary">
           <div className="degree-div">
-            <h6>
+            <h1 className="dashTitle">
               <strong>Degree Plan</strong>
-            </h6>
+            </h1>
             <Plans
               numOfPlans={numOfPlans}
               dep={planState}
@@ -167,22 +167,22 @@ export default function Dashboard() {
             />
           </div>
         </div>
-        <div className="col-4 child-col card border-secondary">
+        <div className="col child-col mycard border-secondary">
           <div className="create-div">
-            <h6>
+            <p className="dashTitle">
               <strong>Create Plan</strong>
-            </h6>
+            </p>
             <CreateDegreePlan
               planCount={getPlanCount}
               handlePlanState={handler}
             />
           </div>
         </div>
-        <div className="col-4 child-col card border-secondary">
+        <div className="col child-col mycard border-secondary">
           <div className="rec-div">
-            <h6>
+            <p className="dashTitle">
               <strong>Recommendations</strong>
-            </h6>
+            </p>
             <Paths
               recData={currentRec}
               pos={pos}
@@ -198,7 +198,7 @@ export default function Dashboard() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 
