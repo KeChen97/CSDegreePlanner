@@ -1,3 +1,4 @@
+//Jerry and Ke
 import React from "react";
 import PopulateCourses from "./PopulateCourses";
 import CreatePlan from "./CreatePlan";
@@ -9,7 +10,7 @@ import "../css/CreateDegreePlan.css";
 export default function CreateDegreePlan({ planCount, handlePlanState }) {
   const createPlan = () => {
     let plans = [];
-    const selectedCourses = document.querySelectorAll(".form-select");
+    const selectedCourses = document.querySelectorAll(".myform-select");
 
     plans.push({ pos: planCount() });
 
@@ -41,7 +42,7 @@ export default function CreateDegreePlan({ planCount, handlePlanState }) {
   };
 
   const clearFields = () => {
-    const selectedCourses = document.querySelectorAll(".form-select");
+    const selectedCourses = document.querySelectorAll(".myform-select");
     for (let i = 0; i < selectedCourses.length; i++) {
       let select = selectedCourses[i];
       select.value = "none";
@@ -52,141 +53,156 @@ export default function CreateDegreePlan({ planCount, handlePlanState }) {
     <>
       <div className="plan-div">
         <div className="sem-one" id="one">
+          <label className="fw-bold semester-badge badge rounded-pill text-bg-secondary">
+            Semester I:
+          </label>
           <div className="one">
-            <label
-              for="semester1"
-              className="fw-bold semester-badge badge rounded-pill text-bg-secondary"
-            >
-              Semester I:
+            <label className="courseLabel" for="semester11">
+              Course 1
             </label>
             <select
-              id="semester1"
-              className="form-select create-plan text-center"
+              id="semester11"
+              className="myform-select create-plan text-center"
             >
               <option value="none" selected disabled hidden>
-                -select a course-
+                Click to select a course
               </option>
             </select>
           </div>
           <div className="one">
+            <label className="courseLabel" for="semester12">
+              Course 2
+            </label>
             <select
               id="semester12"
-              className="form-select create-plan text-center"
+              className="myform-select create-plan text-center"
             >
               <option value="none" selected disabled hidden>
-                -select a course-
+                Click to select a course
               </option>
             </select>
           </div>
         </div>
         <div className="sem-two" id="two">
-          <label
-            for="semester2"
-            className="fw-bold semester-badge badge rounded-pill text-bg-secondary"
-          >
+          <label className="fw-bold semester-badge badge rounded-pill text-bg-secondary">
             Semester II:
           </label>
           <div className="two">
+            <label className="courseLabel" for="semester21">
+              Course 1
+            </label>
             <select
-              id="semester2"
-              className="form-select create-plan text-center"
+              id="semester21"
+              className="myform-select create-plan text-center"
             >
               <option value="none" selected disabled hidden>
-                -select a course-
+                Click to select a course
               </option>
             </select>
           </div>
           <div className="two">
+            <label className="courseLabel" for="semester22">
+              Course 2
+            </label>
             <select
               id="semester22"
-              className="form-select create-plan text-center"
+              className="myform-select create-plan text-center"
             >
               <option value="none" selected disabled hidden>
-                -select a course-
+                Click to select a course
               </option>
             </select>
           </div>
         </div>
         <div className="sem-three" id="three">
-          <label
-            for="semester3"
-            className="fw-bold semester-badge badge rounded-pill text-bg-secondary"
-          >
+          <label className="fw-bold semester-badge badge rounded-pill text-bg-secondary">
             Semester III:
           </label>
           <div className="three">
+            <label className="courseLabel" for="semester31">
+              Course 1
+            </label>
             <select
-              id="semester3"
-              className="form-select create-plan text-center"
+              id="semester31"
+              className="myform-select create-plan text-center"
             >
               <option value="none" selected disabled hidden>
-                -select a course-
+                Click to select a course
               </option>
             </select>
           </div>
           <div className="three">
+            <label className="courseLabel" for="semester32">
+              Course 2
+            </label>
             <select
               id="semester32"
-              className="form-select create-plan text-center"
+              className="myform-select create-plan text-center"
             >
               <option value="none" selected disabled hidden>
-                -select a course-
+                Click to select a course
               </option>
             </select>
           </div>
         </div>
         <div className="sem-four">
-          <label
-            for="semester4"
-            className="fw-bold semester-badge badge rounded-pill text-bg-secondary"
-          >
+          <label className="fw-bold semester-badge badge rounded-pill text-bg-secondary">
             Semester IV:
           </label>
           <div className="four">
+            <label className="courseLabel" for="semester41">
+              Course 1
+            </label>
             <select
-              id="semester4"
-              className="form-select create-plan text-center"
+              id="semester41"
+              className="myform-select create-plan text-center"
             >
               <option value="none" selected disabled hidden>
-                -select a course-
+                Click to select a course
               </option>
             </select>
           </div>
           <div className="four">
+            <label className="courseLabel" for="semester42">
+              Course 2
+            </label>
             <select
               id="semester42"
-              className="form-select create-plan text-center"
+              className="myform-select create-plan text-center"
             >
               <option value="none" selected disabled hidden>
-                -select a course-
+                Click to select a course
               </option>
             </select>
           </div>
         </div>
         <div className="sem-five">
-          <label
-            for="semester5"
-            className="fw-bold semester-badge badge rounded-pill text-bg-secondary"
-          >
+          <label className="fw-bold semester-badge badge rounded-pill text-bg-secondary">
             Semester V:
           </label>
           <div className="five">
+            <label className="courseLabel" for="semester51">
+              Course 1
+            </label>
             <select
-              id="semester5"
-              className="form-select create-plan text-center"
+              id="semester51"
+              className="myform-select create-plan text-center"
             >
               <option value="none" selected disabled hidden>
-                -select a course-
+                Click to select a course
               </option>
             </select>
           </div>
           <div className="five">
+            <label className="courseLabel" for="semester52">
+              Course 2
+            </label>
             <select
               id="semester52"
-              className="form-select create-plan text-center"
+              className="myform-select create-plan text-center"
             >
               <option value="none" selected disabled hidden>
-                -select a course-
+                Click to select a course
               </option>
             </select>
           </div>
