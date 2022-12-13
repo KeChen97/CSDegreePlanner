@@ -43,7 +43,7 @@ Icon: [Google Icon](fonts.google.com/icons)
 Dashboard before
 ![dashbefore](https://github.com/KeChen97/CSDegreePlanner/blob/main/Proj3Screenshots/dashbefore.png?raw=true)
 Dashboard after
-![dashafter](https://github.com/KeChen97/CSDegreePlanner/blob/main/Proj4Screenshots/WX20221212-133026@2x.png?raw=true)
+![dashafter](https://github.com/KeChen97/CSDegreePlanner/blob/main/Proj4Screenshots/dashafter.png)
 
 ## AxeTool Report
 ![report1](https://github.com/KeChen97/CSDegreePlanner/blob/main/AxeReport/report1.png)
