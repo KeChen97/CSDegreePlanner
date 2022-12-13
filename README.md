@@ -20,8 +20,8 @@ The goal is to create a degree planner for students in the Khoury Align MSCS pro
 
 
 ## Links
-- [Link to Demo Video](https://drive.google.com/file/d/1Tb0Oz4vOjgJqKqqF5NUvHwfOCFkiO3OH/view?usp=share_link) 
-- [Link to Slides](https://docs.google.com/presentation/d/125DEhiiGFAGgeMK6UxllhF_ZTRJBRE0_m3tbAw3cngQ/edit#slide=id.g1596b0566c4_0_63)
+- [Link to Demo Video](https://drive.google.com/file/d/1CDossXZU4uSC0732Pc4yUZRuC2q4O5ak/view?usp=share_link) 
+- [Link to Slides](https://docs.google.com/presentation/d/125DEhiiGFAGgeMK6UxllhF_ZTRJBRE0_m3tbAw3cngQ/edit?usp=sharing)
 - [CS 5610 Web Development Class Link](https://johnguerra.co/classes/webDevelopment_fall_2022/)
 
 ## Palette
