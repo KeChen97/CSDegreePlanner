@@ -67,7 +67,7 @@ function Navbar({ isLogin, userLogout }) {
         <div className="navbar-nav icons">
           <div className="">{isLogin ? <AccountIcon /> : ""}</div>
           <div className="">
-            {user ? <LogoutIcon userLogout={userLogout} /> : ""}
+            {isLogin ? <LogoutIcon userLogout={userLogout} /> : ""}
           </div>
         </div>
       </nav>
