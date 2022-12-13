@@ -52,7 +52,6 @@ function LoginPanel({ isLogin, setisLogin }) {
               <label for="email" className="form-label">
                 Email
               </label>
-              <div className="loginmsg">{loginmsg}</div>
             </div>
 
             <div className="form-div">
@@ -70,7 +69,7 @@ function LoginPanel({ isLogin, setisLogin }) {
                 Password
               </label>
             </div>
-
+            <div className="loginmsg">{loginmsg}</div>
             <button className="loginBtn">Login</button>
             <div>
               Don't have an account yet?

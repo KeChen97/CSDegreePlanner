@@ -93,8 +93,12 @@
   z-index: 10;
 }
 
-.inputBox:valid {
-  /* background-color: rgb(248, 244, 226); */
+/* .inputBox:valid {
+  background-color: rgb(248, 244, 226);
+} */
+
+.loginmsg {
+  margin: 5px;
 }
 
 .loginBtn {
