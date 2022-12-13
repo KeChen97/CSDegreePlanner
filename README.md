@@ -34,6 +34,8 @@ Text: [Poppins](https://fonts.googleapis.com/css2?family=Poppins&amp;display=swa
 
 Icon: [Google Icon](fonts.google.com/icons)
 
+## Usability Study Reports
+[Usability Study Reports](https://github.com/KeChen97/CSDegreePlanner/blob/main/Usability%20Study%20Reports.pdf)
 
 ## Screenshots
 ![beforeafter1](https://github.com/KeChen97/CSDegreePlanner/blob/main/Proj4Screenshots/beforeafter1.png?raw=true)
@@ -42,6 +44,12 @@ Dashboard before
 ![dashbefore](https://github.com/KeChen97/CSDegreePlanner/blob/main/Proj3Screenshots/dashbefore.png?raw=true)
 Dashboard after
 ![dashafter](https://github.com/KeChen97/CSDegreePlanner/blob/main/Proj4Screenshots/WX20221212-133026@2x.png?raw=true)
+
+## AxeTool Report
+![report1](https://github.com/KeChen97/CSDegreePlanner/blob/main/AxeReport/report1.png)
+![report2](https://github.com/KeChen97/CSDegreePlanner/blob/main/AxeReport/report2.png)
+![report3](https://github.com/KeChen97/CSDegreePlanner/blob/main/AxeReport/report3.png)
+![report4](https://github.com/KeChen97/CSDegreePlanner/blob/main/AxeReport/report4.png)
 
 
 
