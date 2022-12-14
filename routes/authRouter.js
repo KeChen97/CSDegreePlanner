@@ -20,6 +20,7 @@ router.post("/login", async (req, res) => {
       if (loginResult) {
         req.session.user = userInfo;
         console.log("User login successfully", req.session.user);
+        // CODE REVIEW: It's a good idea for server to return formatted api result. Things are so much easier for frontend!
         res.json({ success: true, msg: "Successful login", user: userInfo });
       } else {
         res.json({ success: false, msg: "Wrong password or email" });
