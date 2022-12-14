@@ -1,3 +1,4 @@
+<!-- CODE REVIEW: It would be a good idea to remove the unused material from create-react-app to better organize the code base. -->
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

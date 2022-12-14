@@ -9,6 +9,7 @@ import "../css/Dashboard.css";
 import PropTypes from "prop-types";
 
 export default function Dashboard({ isLogin, userLogout }) {
+  // CODE REVIEW: It's a good practice to leave meaningful comments about the code for people (and the author later on) to understand. Great job!
   /*
    * Ke Chen
    * tab variable decides which component to render
