@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Path from "./Path";
-import "../css/Paths.css"
+import "../css/Paths.css";
 import PropTypes from "prop-types";
 
 // Jerry Asala
@@ -73,13 +73,13 @@ export default function Paths({ recData, pos, pCourses }) {
   return (
     <>
       <div className="row path-div">
-          <Path
-            name={recData}
-            key={pos}
-            pathCourses={pCourses}
-            courses={pCourses}
-            courseNames={getCourseNameArr}
-          />
+        <Path
+          name={recData}
+          key={pos}
+          pathCourses={pCourses}
+          courses={pCourses}
+          courseNames={getCourseNameArr}
+        />
       </div>
     </>
   );
@@ -88,5 +88,5 @@ export default function Paths({ recData, pos, pCourses }) {
 Paths.prototype = {
   recData: PropTypes.string.isRequired,
   pos: PropTypes.number.isRequired,
-  pCourses: PropTypes.array.isRequired
+  pCourses: PropTypes.array.isRequired,
 };

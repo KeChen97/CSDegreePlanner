@@ -9,14 +9,6 @@ const pathRouter = require("./routes/pathRouter");
 
 const port = process.env.PORT || 3001;
 const app = express();
-const cors = require("cors");
-app.use(
-  cors({
-    origin: "http://localhost:3000",
-    methods: "GET, POST, PUT, DELETE",
-    credentials: true,
-  })
-);
 
 app.use(
   session({

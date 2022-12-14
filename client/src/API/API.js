@@ -52,7 +52,7 @@ const API = {
 
   logout: async () => {
     try {
-      const res = await fetch("/logout", {
+      await fetch("/logout", {
         method: "get",
       });
       console.log("User logout");

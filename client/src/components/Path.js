@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import PathItem from "./PathItem";
 import PropTypes from "prop-types";
 import UsePlan from "./UsePlan";

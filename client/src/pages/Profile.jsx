@@ -15,9 +15,19 @@ function Profile({ setisLogin, isLogin, userLogout }) {
   async function getUserInfo() {
     try {
       const res = await API.getUser();
-      // console.log("User get in Profile", res);
-      setUser(res.user);
-      setInput({ ...input, ["email"]: res.user.email });
+      console.log("User get in Profile", res);
+      if (res.user) {
+        setUser(res.user);
+        setInput({
+          ...input,
+          ...{
+            email: res.user.email,
+            fname: res.user.fname,
+            lname: res.user.lname,
+            password: res.user.password,
+          },
+        });
+      }
     } catch (e) {
       console.log(e);
     }
@@ -66,7 +76,6 @@ function Profile({ setisLogin, isLogin, userLogout }) {
         required={true}
         type="password"
         className="eidtBox"
-        placeholder={user ? user.password : ""}
         id="InputPassword"
       />
     </div>
@@ -212,7 +221,7 @@ function Profile({ setisLogin, isLogin, userLogout }) {
               {edit
                 ? programSelect
                 : user
-                ? user.program == "align"
+                ? user.program === "align"
                   ? alignInput
                   : generalInput
                 : ""}

@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 
-
 // Jerry Asala
 export default function PopulateCourses() {
   const [courses, setCourses] = useState([]);
@@ -34,4 +33,4 @@ export default function PopulateCourses() {
   return <>{courses.map((course) => populateOptions(course))}</>;
 }
 
-PopulateCourses.prototype = {}
+PopulateCourses.prototype = {};

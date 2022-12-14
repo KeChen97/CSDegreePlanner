@@ -4,8 +4,7 @@ import PropTypes from "prop-types";
 
 // Jerry Asala
 export default function PathItem({ courses, courseNames }) {
-
-  console.log("arrcourses..", courses)
+  console.log("arrcourses..", courses);
   if (!courses) {
     return (
       <div>
@@ -26,7 +25,6 @@ export default function PathItem({ courses, courseNames }) {
                 semester={course.semester}
               />
             </div>
-            
           );
         }
         return null;
